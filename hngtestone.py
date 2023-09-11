@@ -21,11 +21,8 @@ def slack_user():
 
 def get_current_utc_time():
     current_time = datetime.utcnow()
-    # Add or subtract a random number of seconds within +/-2 minutes (120 seconds)
-    random_seconds = random.randint(-120, 120)
-    adjusted_time = current_time + timedelta(seconds=random_seconds)
     
-    return adjusted_time
+    return current_time
 
 if __name__ == "__main__":
     app.run(debug=True)
